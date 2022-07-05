@@ -15,4 +15,14 @@
   --colorGray300: hsl(0, 0%, 100%);
   --colorGray400: hsl(204, 43%, 93%);
   --colorGray500: hsl(218, 22%, 67%);
+  --color-text-default: var(--colorCyan300);
+  --color-text-weak: var(--colorGray400);
+  --color-text-dark: var(--colorGray500);
+  --color-text-visualization-primary: var(--colorCyan400);
+  --color-text-visualization-secondary: var(--colorBrightYellow300);
+  --color-background-default: var(--colorGray400);
+  --color-background-light: var(--colorGray300);
+  --color-background-primary: var(--colorCyan400);
+  --color-background-secondary: var(--colorCyan300);
+  --color-background-button: var(--colorBrightYellow300);
 }
