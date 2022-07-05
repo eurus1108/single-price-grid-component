@@ -15,7 +15,8 @@
   --colorGray300: hsl(0, 0%, 100%);
   --colorGray400: hsl(204, 43%, 93%);
   --colorGray500: hsl(218, 22%, 67%);
-  --color-text-default: var(--colorCyan300);
+  --colorTransparentGray: rgba(152, 166, 189, 0.25);
+  --color-text-default: var(--colorGray300);
   --color-text-weak: var(--colorGray400);
   --color-text-dark: var(--colorGray500);
   --color-text-visualization-primary: var(--colorCyan400);
@@ -25,4 +26,146 @@
   --color-background-primary: var(--colorCyan400);
   --color-background-secondary: var(--colorCyan300);
   --color-background-button: var(--colorBrightYellow300);
+  --color-boxshadow-default: var(--colorTransparentGray);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-300);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-default);
+  background-color: var(--color-background-default);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.h-wrapper {
+  position: relative;
+  padding: 0 3.2rem;
+}
+
+.card {
+  margin: 0 auto;
+  padding: 7.2rem 0 7.6rem;
+  max-width: 36.5rem;
+  width: 100%;
+}
+
+.card__container {
+  background-color: var(--color-background-light);
+  border-radius: 0.5rem;
+  box-shadow: 0 15px 20px 5px var(--color-boxshadow-default);
+  overflow: hidden;
+}
+
+.card__community {
+  padding: 2.8rem 2.4rem 3.2rem;
+}
+
+.card__community .text-content .headline {
+  margin-bottom: 2.4rem;
+  font-size: var(--font-size-500);
+  letter-spacing: -0.012em;
+  color: var(--color-text-visualization-primary);
+}
+
+.card__community .text-content .sub-headline {
+  margin-bottom: 1.6rem;
+  font-size: var(--font-size-200);
+  letter-spacing: -0.012em;
+  color: var(--color-text-visualization-secondary);
+}
+
+.card__community .text-content .body {
+  font-size: var(--font-size-100);
+  color: var(--color-text-dark);
+  line-height: 2.6rem;
+  letter-spacing: -0.01em;
+}
+
+.card__subscription {
+  padding: 2.5rem 2.2rem 2.4rem;
+  background-color: var(--color-background-primary);
+}
+
+.card__subscription .content-container {
+  margin-bottom: 3rem;
+}
+
+.card__subscription .content-container .headline,
+.card__why-us .headline {
+  margin-bottom: 1.7rem;
+  font-size: var(--font-size-400);
+  letter-spacing: -0.01em;
+}
+
+.card__subscription .content-container .price-plan {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+
+.card__subscription .content-container .price-plan .price {
+  margin-right: 1.1rem;
+  font-size: var(--font-size-700);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.012em;
+}
+
+.card__subscription .content-container .price-plan .month {
+  letter-spacing: -0.01em;
+  color: var(--color-text-weak);
+}
+
+.card__subscription .content-container .body {
+  letter-spacing: -0.01em;
+}
+
+.button {
+  display: inline-block;
+  padding: 1.5rem 0 1.4rem;
+  width: 100%;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  letter-spacing: -0.01em;
+  background-color: var(--color-background-button);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.25);
+}
+
+.card__why-us {
+  padding: 2.5rem 2.4rem 2.6rem;
+  background-color: var(--color-background-secondary);
+}
+
+.card__why-us .headline {
+  margin-bottom: 1.9rem;
+}
+
+.card__why-us .card__list .card__list-item {
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+  color: var(--color-text-weak);
 }
