@@ -28,7 +28,7 @@
   --color-background-secondary: var(--colorCyan300);
   --color-background-button: var(--colorBrightYellow300);
   --color-boxshadow-default: var(--colorTransparentGray300);
-  --color-boxshadow-button: var(--colorTransparentGray400)  :
+  --color-boxshadow-button: var(--colorTransparentGray400);
 }
 
 html {
@@ -71,8 +71,14 @@ ul {
 .card {
   margin: 0 auto;
   padding: 7.2rem 0 7.6rem;
-  max-width: 36.5rem;
+  max-width: 63.5rem;
   width: 100%;
+}
+
+@media only screen and (max-width: 580px) {
+  .card {
+    max-width: 41.6rem;
+  }
 }
 
 .card__container {
@@ -117,8 +123,9 @@ ul {
   margin-bottom: 3rem;
 }
 
-.card__subscription .content-container, .card__subscription .card__element__link {
-  padding: 0 .2rem;
+.card__subscription .content-container,
+.card__subscription .card__element__link {
+  padding: 0 0.2rem;
 }
 
 .card__subscription .content-container .headline,
@@ -159,7 +166,7 @@ ul {
   letter-spacing: -0.01em;
   background-color: var(--color-background-button);
   border-radius: 0.5rem;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .25);
+  box-shadow: 0 10px 20px -5px var(--color-boxshadow-button);
 }
 
 .card__why-us {
@@ -178,7 +185,47 @@ ul {
   color: var(--color-text-weak);
 }
 
-
 .card__why-us .card__list .card__list-item:not(:last-child) {
   margin-bottom: 0.4rem;
+}
+
+@media only screen and (min-width: 581px) {
+  .card {
+    padding: 16.3rem 0 16.2rem;
+  }
+
+  .card__container {
+    display: grid;
+    grid-template: 21.6rem 25.9rem / repeat(2, 1fr);
+  }
+
+  .card__community {
+    grid-column: 1 / span 2;
+    min-height: 21.6rem;
+  }
+
+  .card__community .text-content .headline {
+    font-size: var(--font-size-600);
+  }
+
+  .card__community .text-content .sub-headline {
+    margin-bottom: 1rem;
+    font-size: var(--font-size-400);
+    line-height: 2.1rem;
+  }
+
+  .card__community .text-content .body {
+    font-size: var(--font-size-300);
+  }
+
+  .card__community,
+  .card__subscription,
+  .card__why-us {
+    padding: 4rem;
+  }
+
+  .card__subscription .content-container,
+  .card__subscription .card__element__link {
+    padding: 0;
+  }
 }
